@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: shandytp/amazon-sales-data-docker-db:latest
+    container_name: sales_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: etl_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
