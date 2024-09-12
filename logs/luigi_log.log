@@ -1,710 +1,273 @@
-2024-09-12 17:59:05 INFO luigi: logging configured via *.conf file
-2024-09-12 17:59:05 INFO luigi: logging configured via *.conf file
-2024-09-12 17:59:05 DEBUG luigi-interface: Checking if LoadData() is complete
-2024-09-12 17:59:05 DEBUG luigi-interface: Checking if TransformSalesData() is complete
-2024-09-12 17:59:05 DEBUG luigi-interface: Checking if ExtractNLP() is complete
-2024-09-12 17:59:05 DEBUG urllib3.connectionpool: Starting new HTTP connection (1): localhost:8082
-2024-09-12 17:59:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 17:59:05 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   PENDING
-2024-09-12 17:59:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 17:59:05 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   PENDING
-2024-09-12 17:59:05 DEBUG luigi-interface: Checking if ExtractSalesData() is complete
-2024-09-12 17:59:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 17:59:05 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   PENDING
-2024-09-12 17:59:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 17:59:05 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   PENDING
-2024-09-12 17:59:05 INFO luigi-interface: Done scheduling tasks
-2024-09-12 17:59:05 INFO luigi-interface: Running Worker with 1 processes
-2024-09-12 17:59:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_worker HTTP/1.1" 200 18
-2024-09-12 17:59:05 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 17:59:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 513
-2024-09-12 17:59:05 DEBUG luigi-interface: Pending tasks: 3
-2024-09-12 17:59:05 INFO luigi-interface: [pid 27465] Worker Worker(salt=1481164653, workers=1, host=pop-os, username=jeisa, pid=27465) running   ExtractSalesData()
-2024-09-12 17:59:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 17:59:06 INFO luigi-interface: [pid 27465] Worker Worker(salt=1481164653, workers=1, host=pop-os, username=jeisa, pid=27465) done      ExtractSalesData()
-2024-09-12 17:59:06 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 17:59:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 17:59:06 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   DONE
-2024-09-12 17:59:06 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 17:59:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 517
-2024-09-12 17:59:06 DEBUG luigi-interface: Pending tasks: 2
-2024-09-12 17:59:06 INFO luigi-interface: [pid 27465] Worker Worker(salt=1481164653, workers=1, host=pop-os, username=jeisa, pid=27465) running   TransformSalesData()
-2024-09-12 17:59:07 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 17:59:08 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 17:59:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 17:59:09 INFO luigi-interface: [pid 27465] Worker Worker(salt=1481164653, workers=1, host=pop-os, username=jeisa, pid=27465) done      TransformSalesData()
-2024-09-12 17:59:09 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 17:59:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 17:59:09 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   DONE
-2024-09-12 17:59:09 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 17:59:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 406
-2024-09-12 17:59:09 DEBUG luigi-interface: Done
-2024-09-12 17:59:09 DEBUG luigi-interface: There are no more tasks to run at this time
-2024-09-12 17:59:09 DEBUG luigi-interface: ExtractNLP__99914b932b is currently run by worker Worker(salt=9767185058, workers=1, host=pop-os, username=jeisa, pid=27419)
-2024-09-12 17:59:09 INFO luigi-interface: Worker Worker(salt=1481164653, workers=1, host=pop-os, username=jeisa, pid=27465) was stopped. Shutting down Keep-Alive thread
-2024-09-12 17:59:09 INFO luigi-interface: 
+2024-09-12 22:26:09 INFO luigi: logging configured via *.conf file
+2024-09-12 22:26:09 INFO luigi: logging configured via *.conf file
+2024-09-12 22:26:09 DEBUG luigi-interface: Checking if LoadData() is complete
+2024-09-12 22:26:09 DEBUG luigi-interface: Checking if TransformSalesData() is complete
+2024-09-12 22:26:09 DEBUG luigi-interface: Checking if ExtractNLP() is complete
+2024-09-12 22:26:09 DEBUG luigi-interface: Checking if TransformElectronics() is complete
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: Starting new HTTP connection (1): localhost:8082
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:26:09 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   PENDING
+2024-09-12 22:26:09 DEBUG luigi-interface: Checking if ExtractElectronicsData() is complete
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:26:09 INFO luigi-interface: Informed scheduler that task   TransformElectronics__99914b932b   has status   PENDING
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:26:09 INFO luigi-interface: Informed scheduler that task   ExtractElectronicsData__99914b932b   has status   PENDING
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:26:09 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   PENDING
+2024-09-12 22:26:09 DEBUG luigi-interface: Checking if ExtractSalesData() is complete
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:26:09 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   PENDING
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:26:09 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   PENDING
+2024-09-12 22:26:09 INFO luigi-interface: Done scheduling tasks
+2024-09-12 22:26:09 INFO luigi-interface: Running Worker with 1 processes
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_worker HTTP/1.1" 200 18
+2024-09-12 22:26:09 DEBUG luigi-interface: Asking scheduler for work...
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 249
+2024-09-12 22:26:09 DEBUG luigi-interface: Pending tasks: 6
+2024-09-12 22:26:09 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) running   ExtractNLP()
+2024-09-12 22:26:09 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:10 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport HTTP/1.1" 200 61265
+2024-09-12 22:26:10 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:10 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:10 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/rugby-union/articles/cy8x8dy7e59o HTTP/1.1" 200 44995
+2024-09-12 22:26:10 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:11 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cp3d3n9rwr9o HTTP/1.1" 200 47425
+2024-09-12 22:26:11 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:11 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:11 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/rugby-union/articles/cj0802032pro HTTP/1.1" 200 47870
+2024-09-12 22:26:11 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:11 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/tennis/articles/clygyz78xjjo HTTP/1.1" 200 51897
+2024-09-12 22:26:12 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:12 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/c4gen1vegx7o HTTP/1.1" 200 50619
+2024-09-12 22:26:12 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:12 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:12 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cg797129ryvo HTTP/1.1" 200 51309
+2024-09-12 22:26:12 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:13 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4geyjml92eo HTTP/1.1" 200 53480
+2024-09-12 22:26:13 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:13 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cz73xp4wpvqo HTTP/1.1" 200 50549
+2024-09-12 22:26:13 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:13 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:14 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c70jv09v1xpo HTTP/1.1" 200 52364
+2024-09-12 22:26:14 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:14 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:14 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c5y3y4e6kn5o HTTP/1.1" 200 46330
+2024-09-12 22:26:14 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:15 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/c5y5yrjggxpo HTTP/1.1" 200 47075
+2024-09-12 22:26:15 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:15 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:16 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cgq2xdd5n34o HTTP/1.1" 200 48723
+2024-09-12 22:26:16 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:16 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:17 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgj52wz6rjo HTTP/1.1" 200 63224
+2024-09-12 22:26:17 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:17 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:18 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:19 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:19 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/rugby-union/articles/cql3l6vywz6o HTTP/1.1" 200 48800
+2024-09-12 22:26:20 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:21 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:22 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:23 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:24 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:25 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:26 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:27 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:28 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:29 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:30 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:31 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:32 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:33 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:34 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:35 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:36 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:37 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:38 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:39 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:40 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:41 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:42 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:43 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:43 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:43 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/czxlv57v707o HTTP/1.1" 200 48089
+2024-09-12 22:26:43 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:44 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c0494zkxprpo HTTP/1.1" 200 47550
+2024-09-12 22:26:44 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:44 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cq6rede0130o HTTP/1.1" 200 50360
+2024-09-12 22:26:45 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:45 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/mixed-martial-arts/articles/c5yl14elqz5o HTTP/1.1" 200 45715
+2024-09-12 22:26:45 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:45 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:46 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/cr7r7vdvddko HTTP/1.1" 200 46256
+2024-09-12 22:26:46 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:46 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cwy5ypg3dg3o HTTP/1.1" 200 49972
+2024-09-12 22:26:46 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:46 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:46 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4gvnjvgmm0o HTTP/1.1" 200 56947
+2024-09-12 22:26:47 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:47 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cr5ng3z0j0qo HTTP/1.1" 200 47992
+2024-09-12 22:26:47 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:47 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:47 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckg2r5prlpno HTTP/1.1" 200 55160
+2024-09-12 22:26:47 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:48 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:48 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cr5ngjm272lo HTTP/1.1" 200 45722
+2024-09-12 22:26:49 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:49 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c9wjw1prkd4o HTTP/1.1" 200 44635
+2024-09-12 22:26:49 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:49 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:49 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cz6xqgey07qo HTTP/1.1" 200 51526
+2024-09-12 22:26:50 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:50 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c14z3ynmp4ro HTTP/1.1" 200 51607
+2024-09-12 22:26:50 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:50 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:50 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cn7l0n8e8vjo HTTP/1.1" 200 52278
+2024-09-12 22:26:51 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:51 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cjw3jenpznqo HTTP/1.1" 200 47092
+2024-09-12 22:26:51 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:51 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cje2evxdy70o HTTP/1.1" 200 46917
+2024-09-12 22:26:51 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:52 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgwg1wjdvno HTTP/1.1" 200 44997
+2024-09-12 22:26:52 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:52 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:53 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cd05385k722o HTTP/1.1" 200 58278
+2024-09-12 22:26:53 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:53 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:54 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:54 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/c4ngydm1x55o HTTP/1.1" 200 52593
+2024-09-12 22:26:54 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:55 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cdd734dp7emo HTTP/1.1" 200 49646
+2024-09-12 22:26:55 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:55 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:56 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:57 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:58 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:26:58 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/archery/articles/cp089q32yrqo HTTP/1.1" 200 48430
+2024-09-12 22:26:59 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:26:59 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:00 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/american-football/articles/c5yk93jkj4xo HTTP/1.1" 200 51024
+2024-09-12 22:27:00 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:00 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:01 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c134587zl01o HTTP/1.1" 200 45797
+2024-09-12 22:27:01 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:01 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:01 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cx2nd9zewx5o HTTP/1.1" 200 53414
+2024-09-12 22:27:02 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:02 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ce380jklj44o HTTP/1.1" 200 55493
+2024-09-12 22:27:02 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:02 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:03 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c80e8gjyrz1o HTTP/1.1" 200 47646
+2024-09-12 22:27:03 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:03 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:04 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c15gewlnvj3o HTTP/1.1" 200 51571
+2024-09-12 22:27:04 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:04 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:05 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c7v52nq4y8do HTTP/1.1" 200 51010
+2024-09-12 22:27:05 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:05 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cx2gkjzyke4o HTTP/1.1" 200 45217
+2024-09-12 22:27:05 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
+2024-09-12 22:27:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:06 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cn33yxd1rz0o HTTP/1.1" 200 40840
+2024-09-12 22:27:06 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) done      ExtractNLP()
+2024-09-12 22:27:06 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
+2024-09-12 22:27:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:27:06 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   DONE
+2024-09-12 22:27:06 DEBUG luigi-interface: Asking scheduler for work...
+2024-09-12 22:27:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 273
+2024-09-12 22:27:06 DEBUG luigi-interface: Pending tasks: 5
+2024-09-12 22:27:06 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) running   ExtractElectronicsData()
+2024-09-12 22:27:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:07 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:08 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) done      ExtractElectronicsData()
+2024-09-12 22:27:08 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
+2024-09-12 22:27:08 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:27:08 INFO luigi-interface: Informed scheduler that task   ExtractElectronicsData__99914b932b   has status   DONE
+2024-09-12 22:27:08 DEBUG luigi-interface: Asking scheduler for work...
+2024-09-12 22:27:08 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 269
+2024-09-12 22:27:08 DEBUG luigi-interface: Pending tasks: 4
+2024-09-12 22:27:08 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) running   TransformElectronics()
+2024-09-12 22:27:08 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:10 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) done      TransformElectronics()
+2024-09-12 22:27:10 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
+2024-09-12 22:27:10 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:27:10 INFO luigi-interface: Informed scheduler that task   TransformElectronics__99914b932b   has status   DONE
+2024-09-12 22:27:10 DEBUG luigi-interface: Asking scheduler for work...
+2024-09-12 22:27:10 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 261
+2024-09-12 22:27:10 DEBUG luigi-interface: Pending tasks: 3
+2024-09-12 22:27:10 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) running   ExtractSalesData()
+2024-09-12 22:27:10 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:11 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) done      ExtractSalesData()
+2024-09-12 22:27:11 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
+2024-09-12 22:27:11 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:27:11 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   DONE
+2024-09-12 22:27:11 DEBUG luigi-interface: Asking scheduler for work...
+2024-09-12 22:27:11 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 265
+2024-09-12 22:27:11 DEBUG luigi-interface: Pending tasks: 2
+2024-09-12 22:27:11 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) running   TransformSalesData()
+2024-09-12 22:27:11 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:12 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:13 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:14 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:15 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) done      TransformSalesData()
+2024-09-12 22:27:15 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
+2024-09-12 22:27:15 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:27:15 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   DONE
+2024-09-12 22:27:15 DEBUG luigi-interface: Asking scheduler for work...
+2024-09-12 22:27:15 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 245
+2024-09-12 22:27:15 DEBUG luigi-interface: Pending tasks: 1
+2024-09-12 22:27:15 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) running   LoadData()
+2024-09-12 22:27:16 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:17 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:18 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:19 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:20 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:21 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:22 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:23 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:24 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:25 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:26 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:27 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:28 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:29 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:30 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:31 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:32 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:33 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:35 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:36 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:37 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:38 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:39 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:40 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:41 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:42 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:43 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
+2024-09-12 22:27:43 INFO luigi-interface: [pid 41503] Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) done      LoadData()
+2024-09-12 22:27:43 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
+2024-09-12 22:27:43 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
+2024-09-12 22:27:43 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   DONE
+2024-09-12 22:27:43 DEBUG luigi-interface: Asking scheduler for work...
+2024-09-12 22:27:43 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 154
+2024-09-12 22:27:43 DEBUG luigi-interface: Done
+2024-09-12 22:27:43 DEBUG luigi-interface: There are no more tasks to run at this time
+2024-09-12 22:27:43 INFO luigi-interface: Worker Worker(salt=1450442449, workers=1, host=pop-os, username=jeisa, pid=41503) was stopped. Shutting down Keep-Alive thread
+2024-09-12 22:27:43 INFO luigi-interface: 
 ===== Luigi Execution Summary =====
 
-Scheduled 4 tasks of which:
-* 2 ran successfully:
-    - 1 ExtractSalesData()
-    - 1 TransformSalesData()
-* 2 were left pending, among these:
-    * 1 were being run by another worker:
-        - 1 ExtractNLP()
-    * 1 had dependencies that were being run by other worker:
-        - 1 LoadData()
-
-The other workers were:
-    - Worker(salt=9767185058, workers=1, host=pop-os, username=jeisa, pid=27419) ran 1 tasks
-
-
-This progress looks :) because there were no failed tasks or missing dependencies
-
-===== Luigi Execution Summary =====
-
-2024-09-12 18:01:51 INFO luigi: logging configured via *.conf file
-2024-09-12 18:01:51 INFO luigi: logging configured via *.conf file
-2024-09-12 18:01:51 DEBUG luigi-interface: Checking if LoadData() is complete
-2024-09-12 18:01:51 DEBUG luigi-interface: Checking if TransformSalesData() is complete
-2024-09-12 18:01:51 DEBUG luigi-interface: Checking if ExtractNLP() is complete
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: Starting new HTTP connection (1): localhost:8082
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:01:51 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   PENDING
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:01:51 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   PENDING
-2024-09-12 18:01:51 DEBUG luigi-interface: Checking if ExtractSalesData() is complete
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:01:51 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   PENDING
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:01:51 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   PENDING
-2024-09-12 18:01:51 INFO luigi-interface: Done scheduling tasks
-2024-09-12 18:01:51 INFO luigi-interface: Running Worker with 1 processes
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_worker HTTP/1.1" 200 18
-2024-09-12 18:01:51 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 249
-2024-09-12 18:01:51 DEBUG luigi-interface: Pending tasks: 4
-2024-09-12 18:01:51 INFO luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) running   ExtractNLP()
-2024-09-12 18:01:51 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:52 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport HTTP/1.1" 200 61210
-2024-09-12 18:01:52 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:52 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:53 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/c4gen1vegx7o HTTP/1.1" 200 50361
-2024-09-12 18:01:53 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:53 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4geyjml92eo HTTP/1.1" 200 53280
-2024-09-12 18:01:53 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:53 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:54 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cz73xp4wpvqo HTTP/1.1" 200 50527
-2024-09-12 18:01:54 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:54 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:54 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c70jv09v1xpo HTTP/1.1" 200 52154
-2024-09-12 18:01:55 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:55 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/rugby-union/articles/cj0802032pro HTTP/1.1" 200 46263
-2024-09-12 18:01:55 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:55 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:56 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cwy5ypg3dg3o HTTP/1.1" 200 48984
-2024-09-12 18:01:56 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:56 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:56 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c5y3y4e6kn5o HTTP/1.1" 200 46154
-2024-09-12 18:01:57 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:57 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/c5y5yrjggxpo HTTP/1.1" 200 46893
-2024-09-12 18:01:57 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:57 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:58 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/czxlv57v707o HTTP/1.1" 200 47908
-2024-09-12 18:01:58 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:58 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:58 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cj62l4yrky1o HTTP/1.1" 200 47008
-2024-09-12 18:01:59 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:01:59 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cgq2xdd5n34o HTTP/1.1" 200 48587
-2024-09-12 18:01:59 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:01:59 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:00 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgj52wz6rjo HTTP/1.1" 200 63055
-2024-09-12 18:02:00 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:00 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:00 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cn7l0n8e8vjo HTTP/1.1" 200 52124
-2024-09-12 18:02:00 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:01 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4gvnjvgmm0o HTTP/1.1" 200 56796
-2024-09-12 18:02:01 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:01 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:01 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cjw3jenpznqo HTTP/1.1" 200 46897
-2024-09-12 18:02:02 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:02 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/cr7r7vdvddko HTTP/1.1" 200 46063
-2024-09-12 18:02:02 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:02 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:02 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cq6rede0130o HTTP/1.1" 200 50200
-2024-09-12 18:02:03 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:03 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cz6xqgey07qo HTTP/1.1" 200 51406
-2024-09-12 18:02:03 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:03 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:04 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c14z3ynmp4ro HTTP/1.1" 200 51409
-2024-09-12 18:02:04 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:04 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:04 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckg2r5prlpno HTTP/1.1" 200 54980
-2024-09-12 18:02:05 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:05 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cje2evxdy70o HTTP/1.1" 200 46777
-2024-09-12 18:02:05 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:05 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cnvy49eq4eyo HTTP/1.1" 200 52573
-2024-09-12 18:02:06 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:06 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/tennis/articles/c3d9gy81l42o HTTP/1.1" 200 54206
-2024-09-12 18:02:06 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:06 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cr5ngjm272lo HTTP/1.1" 200 45584
-2024-09-12 18:02:07 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:07 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ce380jklj44o HTTP/1.1" 200 55327
-2024-09-12 18:02:07 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:07 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:08 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c74l2r97l78o HTTP/1.1" 200 46116
-2024-09-12 18:02:08 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:08 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:08 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/american-football/articles/cpvy9ev9vjgo HTTP/1.1" 200 44001
-2024-09-12 18:02:08 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:09 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cg4y6gp6kkxo HTTP/1.1" 200 46385
-2024-09-12 18:02:09 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:09 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cy0nerpzj5jo HTTP/1.1" 200 45142
-2024-09-12 18:02:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:09 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:10 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgwg1wjdvno HTTP/1.1" 200 44859
-2024-09-12 18:02:10 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:10 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/cn47e8l2897o HTTP/1.1" 200 46722
-2024-09-12 18:02:10 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:11 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:11 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cd05385k722o HTTP/1.1" 200 58259
-2024-09-12 18:02:11 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:11 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:12 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/c4ngydm1x55o HTTP/1.1" 200 52589
-2024-09-12 18:02:12 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:12 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cdd734dp7emo HTTP/1.1" 200 49637
-2024-09-12 18:02:12 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:12 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:12 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/archery/articles/cp089q32yrqo HTTP/1.1" 200 48417
-2024-09-12 18:02:13 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:13 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/american-football/articles/c5yk93jkj4xo HTTP/1.1" 200 51017
-2024-09-12 18:02:13 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:13 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:13 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c134587zl01o HTTP/1.1" 200 45787
-2024-09-12 18:02:14 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:14 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c80e8gjyrz1o HTTP/1.1" 200 47468
-2024-09-12 18:02:14 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:14 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c15gewlnvj3o HTTP/1.1" 200 51402
-2024-09-12 18:02:14 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:14 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:15 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c7v52nq4y8do HTTP/1.1" 200 50839
-2024-09-12 18:02:15 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:15 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c36n934x5l6o HTTP/1.1" 200 55057
-2024-09-12 18:02:15 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:15 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:16 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/cy76rk5gndxo HTTP/1.1" 200 52238
-2024-09-12 18:02:16 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:16 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cx2gkjzyke4o HTTP/1.1" 200 45058
-2024-09-12 18:02:16 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:02:16 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:17 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cn33yxd1rz0o HTTP/1.1" 200 40655
-2024-09-12 18:02:17 INFO luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) done      ExtractNLP()
-2024-09-12 18:02:17 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:02:17 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:02:17 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   DONE
-2024-09-12 18:02:17 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:02:17 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 261
-2024-09-12 18:02:17 DEBUG luigi-interface: Pending tasks: 3
-2024-09-12 18:02:17 INFO luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) running   ExtractSalesData()
-2024-09-12 18:02:17 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:18 INFO luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) done      ExtractSalesData()
-2024-09-12 18:02:18 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:02:18 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:02:18 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   DONE
-2024-09-12 18:02:18 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:02:18 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 265
-2024-09-12 18:02:18 DEBUG luigi-interface: Pending tasks: 2
-2024-09-12 18:02:18 INFO luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) running   TransformSalesData()
-2024-09-12 18:02:18 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:19 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:20 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:21 INFO luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) done      TransformSalesData()
-2024-09-12 18:02:21 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:02:21 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:02:21 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   DONE
-2024-09-12 18:02:21 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:02:21 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 245
-2024-09-12 18:02:21 DEBUG luigi-interface: Pending tasks: 1
-2024-09-12 18:02:21 INFO luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) running   LoadData()
-2024-09-12 18:02:21 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:22 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:23 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:24 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:26 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:27 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:28 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:29 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:30 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:31 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:32 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:33 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:34 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:35 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:36 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:37 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:38 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:39 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:41 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:42 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:43 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:02:44 ERROR luigi-interface: [pid 28004] Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) failed    LoadData()
-Traceback (most recent call last):
-  File "/home/jeisa/.local/lib/python3.10/site-packages/luigi/worker.py", line 210, in run
-    new_deps = self._run_get_new_deps()
-  File "/home/jeisa/.local/lib/python3.10/site-packages/luigi/worker.py", line 138, in _run_get_new_deps
-    task_gen = self.task.run()
-  File "/home/jeisa/programming/de/pacmann-project-1/etl.py", line 100, in run
-    load_nlp = load_sales.set_index("product_id")
-  File "/home/jeisa/.local/lib/python3.10/site-packages/pandas/core/frame.py", line 6122, in set_index
-    raise KeyError(f"None of {missing} are in the columns")
-KeyError: "None of ['product_id'] are in the columns"
-2024-09-12 18:02:44 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:02:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:02:44 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   FAILED
-2024-09-12 18:02:44 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:02:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 154
-2024-09-12 18:02:44 DEBUG luigi-interface: Done
-2024-09-12 18:02:44 DEBUG luigi-interface: There are no more tasks to run at this time
-2024-09-12 18:02:44 DEBUG luigi-interface: There are 1 pending tasks possibly being run by other workers
-2024-09-12 18:02:44 DEBUG luigi-interface: There are 1 pending tasks unique to this worker
-2024-09-12 18:02:44 DEBUG luigi-interface: There are 1 pending tasks last scheduled by this worker
-2024-09-12 18:02:44 INFO luigi-interface: Worker Worker(salt=4782361669, workers=1, host=pop-os, username=jeisa, pid=28004) was stopped. Shutting down Keep-Alive thread
-2024-09-12 18:02:44 INFO luigi-interface: 
-===== Luigi Execution Summary =====
-
-Scheduled 4 tasks of which:
-* 3 ran successfully:
-    - 1 ExtractNLP()
-    - 1 ExtractSalesData()
-    - 1 TransformSalesData()
-* 1 failed:
-    - 1 LoadData()
-
-This progress looks :( because there were failed tasks
-
-===== Luigi Execution Summary =====
-
-2024-09-12 18:03:44 INFO luigi: logging configured via *.conf file
-2024-09-12 18:03:44 INFO luigi: logging configured via *.conf file
-2024-09-12 18:03:44 DEBUG luigi-interface: Checking if LoadData() is complete
-2024-09-12 18:03:44 DEBUG luigi-interface: Checking if TransformSalesData() is complete
-2024-09-12 18:03:44 DEBUG luigi-interface: Checking if ExtractNLP() is complete
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: Starting new HTTP connection (1): localhost:8082
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:03:44 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   PENDING
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:03:44 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   PENDING
-2024-09-12 18:03:44 DEBUG luigi-interface: Checking if ExtractSalesData() is complete
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:03:44 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   PENDING
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:03:44 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   PENDING
-2024-09-12 18:03:44 INFO luigi-interface: Done scheduling tasks
-2024-09-12 18:03:44 INFO luigi-interface: Running Worker with 1 processes
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_worker HTTP/1.1" 200 18
-2024-09-12 18:03:44 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 249
-2024-09-12 18:03:44 DEBUG luigi-interface: Pending tasks: 4
-2024-09-12 18:03:44 INFO luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) running   ExtractNLP()
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport HTTP/1.1" 200 61170
-2024-09-12 18:03:44 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:45 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/c4gen1vegx7o HTTP/1.1" 200 50371
-2024-09-12 18:03:45 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:45 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:45 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4geyjml92eo HTTP/1.1" 200 53308
-2024-09-12 18:03:45 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:46 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cz73xp4wpvqo HTTP/1.1" 200 50570
-2024-09-12 18:03:46 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:46 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:46 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c70jv09v1xpo HTTP/1.1" 200 52177
-2024-09-12 18:03:46 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:47 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/rugby-union/articles/cj0802032pro HTTP/1.1" 200 46282
-2024-09-12 18:03:47 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:47 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:47 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cwy5ypg3dg3o HTTP/1.1" 200 49000
-2024-09-12 18:03:47 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:48 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c5y3y4e6kn5o HTTP/1.1" 200 46150
-2024-09-12 18:03:48 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:48 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:48 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/c5y5yrjggxpo HTTP/1.1" 200 46928
-2024-09-12 18:03:49 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:49 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/czxlv57v707o HTTP/1.1" 200 47917
-2024-09-12 18:03:49 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:49 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:49 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cj62l4yrky1o HTTP/1.1" 200 47034
-2024-09-12 18:03:49 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:50 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:50 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cgq2xdd5n34o HTTP/1.1" 200 48587
-2024-09-12 18:03:50 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:50 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgj52wz6rjo HTTP/1.1" 200 63077
-2024-09-12 18:03:51 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:51 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cn7l0n8e8vjo HTTP/1.1" 200 52152
-2024-09-12 18:03:51 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:51 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4gvnjvgmm0o HTTP/1.1" 200 56817
-2024-09-12 18:03:52 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:52 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:52 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cjw3jenpznqo HTTP/1.1" 200 46917
-2024-09-12 18:03:52 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:52 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/cr7r7vdvddko HTTP/1.1" 200 46080
-2024-09-12 18:03:52 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:53 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:53 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cq6rede0130o HTTP/1.1" 200 50225
-2024-09-12 18:03:53 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:53 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cz6xqgey07qo HTTP/1.1" 200 51422
-2024-09-12 18:03:54 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:54 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c14z3ynmp4ro HTTP/1.1" 200 51434
-2024-09-12 18:03:54 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:54 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:54 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckg2r5prlpno HTTP/1.1" 200 54995
-2024-09-12 18:03:54 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:55 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cje2evxdy70o HTTP/1.1" 200 46789
-2024-09-12 18:03:55 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:55 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:55 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cnvy49eq4eyo HTTP/1.1" 200 52593
-2024-09-12 18:03:55 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:56 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/tennis/articles/c3d9gy81l42o HTTP/1.1" 200 54229
-2024-09-12 18:03:56 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:56 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:56 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cr5ngjm272lo HTTP/1.1" 200 45603
-2024-09-12 18:03:56 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:57 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ce380jklj44o HTTP/1.1" 200 55318
-2024-09-12 18:03:57 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:57 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:57 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c74l2r97l78o HTTP/1.1" 200 46124
-2024-09-12 18:03:57 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:58 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/american-football/articles/cpvy9ev9vjgo HTTP/1.1" 200 44021
-2024-09-12 18:03:58 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:58 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:58 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cg4y6gp6kkxo HTTP/1.1" 200 46401
-2024-09-12 18:03:58 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:58 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cy0nerpzj5jo HTTP/1.1" 200 45161
-2024-09-12 18:03:58 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:59 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgwg1wjdvno HTTP/1.1" 200 44869
-2024-09-12 18:03:59 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:59 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/cn47e8l2897o HTTP/1.1" 200 46738
-2024-09-12 18:03:59 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:03:59 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:03:59 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cd05385k722o HTTP/1.1" 200 58271
-2024-09-12 18:03:59 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:00 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/c4ngydm1x55o HTTP/1.1" 200 52606
-2024-09-12 18:04:00 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:00 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:00 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cdd734dp7emo HTTP/1.1" 200 49645
-2024-09-12 18:04:00 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:00 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/archery/articles/cp089q32yrqo HTTP/1.1" 200 48440
-2024-09-12 18:04:01 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:01 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/american-football/articles/c5yk93jkj4xo HTTP/1.1" 200 51035
-2024-09-12 18:04:01 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:01 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:01 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c134587zl01o HTTP/1.1" 200 45802
-2024-09-12 18:04:01 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:02 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c80e8gjyrz1o HTTP/1.1" 200 47497
-2024-09-12 18:04:02 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:02 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:02 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c15gewlnvj3o HTTP/1.1" 200 51426
-2024-09-12 18:04:02 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:03 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c7v52nq4y8do HTTP/1.1" 200 50878
-2024-09-12 18:04:03 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:03 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:03 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c36n934x5l6o HTTP/1.1" 200 55085
-2024-09-12 18:04:03 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:04 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/cy76rk5gndxo HTTP/1.1" 200 52254
-2024-09-12 18:04:04 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:04 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cx2gkjzyke4o HTTP/1.1" 200 45085
-2024-09-12 18:04:04 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:04 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:04:04 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cn33yxd1rz0o HTTP/1.1" 200 40675
-2024-09-12 18:04:05 INFO luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) done      ExtractNLP()
-2024-09-12 18:04:05 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:04:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:04:05 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   DONE
-2024-09-12 18:04:05 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:04:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 261
-2024-09-12 18:04:05 DEBUG luigi-interface: Pending tasks: 3
-2024-09-12 18:04:05 INFO luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) running   ExtractSalesData()
-2024-09-12 18:04:05 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:06 INFO luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) done      ExtractSalesData()
-2024-09-12 18:04:06 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:04:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:04:06 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   DONE
-2024-09-12 18:04:06 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:04:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 265
-2024-09-12 18:04:06 DEBUG luigi-interface: Pending tasks: 2
-2024-09-12 18:04:06 INFO luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) running   TransformSalesData()
-2024-09-12 18:04:06 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:07 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:08 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:09 INFO luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) done      TransformSalesData()
-2024-09-12 18:04:09 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:04:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:04:09 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   DONE
-2024-09-12 18:04:09 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:04:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 245
-2024-09-12 18:04:09 DEBUG luigi-interface: Pending tasks: 1
-2024-09-12 18:04:09 INFO luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) running   LoadData()
-2024-09-12 18:04:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:10 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:11 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:12 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:13 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:14 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:15 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:16 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:17 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:18 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:19 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:20 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:21 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:22 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:23 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:24 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:26 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:27 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:28 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:29 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:04:30 ERROR luigi-interface: [pid 28215] Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) failed    LoadData()
-Traceback (most recent call last):
-  File "/home/jeisa/.local/lib/python3.10/site-packages/luigi/worker.py", line 210, in run
-    new_deps = self._run_get_new_deps()
-  File "/home/jeisa/.local/lib/python3.10/site-packages/luigi/worker.py", line 138, in _run_get_new_deps
-    task_gen = self.task.run()
-  File "/home/jeisa/programming/de/pacmann-project-1/etl.py", line 100, in run
-    load_nlp = load_sales.set_index("article_id")
-  File "/home/jeisa/.local/lib/python3.10/site-packages/pandas/core/frame.py", line 6122, in set_index
-    raise KeyError(f"None of {missing} are in the columns")
-KeyError: "None of ['article_id'] are in the columns"
-2024-09-12 18:04:30 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:04:30 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:04:30 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   FAILED
-2024-09-12 18:04:30 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:04:30 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 154
-2024-09-12 18:04:30 DEBUG luigi-interface: Done
-2024-09-12 18:04:30 DEBUG luigi-interface: There are no more tasks to run at this time
-2024-09-12 18:04:30 DEBUG luigi-interface: There are 1 pending tasks possibly being run by other workers
-2024-09-12 18:04:30 DEBUG luigi-interface: There are 1 pending tasks unique to this worker
-2024-09-12 18:04:30 DEBUG luigi-interface: There are 1 pending tasks last scheduled by this worker
-2024-09-12 18:04:30 INFO luigi-interface: Worker Worker(salt=320362353, workers=1, host=pop-os, username=jeisa, pid=28215) was stopped. Shutting down Keep-Alive thread
-2024-09-12 18:04:30 INFO luigi-interface: 
-===== Luigi Execution Summary =====
-
-Scheduled 4 tasks of which:
-* 3 ran successfully:
-    - 1 ExtractNLP()
-    - 1 ExtractSalesData()
-    - 1 TransformSalesData()
-* 1 failed:
-    - 1 LoadData()
-
-This progress looks :( because there were failed tasks
-
-===== Luigi Execution Summary =====
-
-2024-09-12 18:06:09 INFO luigi: logging configured via *.conf file
-2024-09-12 18:06:09 INFO luigi: logging configured via *.conf file
-2024-09-12 18:06:09 DEBUG luigi-interface: Checking if LoadData() is complete
-2024-09-12 18:06:09 DEBUG luigi-interface: Checking if TransformSalesData() is complete
-2024-09-12 18:06:09 DEBUG luigi-interface: Checking if ExtractNLP() is complete
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: Starting new HTTP connection (1): localhost:8082
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:09 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   PENDING
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:09 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   PENDING
-2024-09-12 18:06:09 DEBUG luigi-interface: Checking if ExtractSalesData() is complete
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:09 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   PENDING
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:09 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   PENDING
-2024-09-12 18:06:09 INFO luigi-interface: Done scheduling tasks
-2024-09-12 18:06:09 INFO luigi-interface: Running Worker with 1 processes
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_worker HTTP/1.1" 200 18
-2024-09-12 18:06:09 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 249
-2024-09-12 18:06:09 DEBUG luigi-interface: Pending tasks: 4
-2024-09-12 18:06:09 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) running   ExtractNLP()
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:09 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport HTTP/1.1" 200 61196
-2024-09-12 18:06:10 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:10 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/c4gen1vegx7o HTTP/1.1" 200 50342
-2024-09-12 18:06:10 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:10 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:11 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4geyjml92eo HTTP/1.1" 200 53273
-2024-09-12 18:06:11 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:11 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cz73xp4wpvqo HTTP/1.1" 200 50529
-2024-09-12 18:06:11 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:11 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:11 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c70jv09v1xpo HTTP/1.1" 200 52148
-2024-09-12 18:06:12 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:12 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/rugby-union/articles/cj0802032pro HTTP/1.1" 200 46273
-2024-09-12 18:06:12 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:12 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:12 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cwy5ypg3dg3o HTTP/1.1" 200 48980
-2024-09-12 18:06:13 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:13 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c5y3y4e6kn5o HTTP/1.1" 200 46137
-2024-09-12 18:06:13 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:13 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:13 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/c5y5yrjggxpo HTTP/1.1" 200 46898
-2024-09-12 18:06:13 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:14 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/czxlv57v707o HTTP/1.1" 200 47901
-2024-09-12 18:06:14 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:14 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:14 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cj62l4yrky1o HTTP/1.1" 200 47021
-2024-09-12 18:06:14 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:15 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cgq2xdd5n34o HTTP/1.1" 200 48584
-2024-09-12 18:06:15 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:15 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgj52wz6rjo HTTP/1.1" 200 63064
-2024-09-12 18:06:15 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:15 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:16 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cn7l0n8e8vjo HTTP/1.1" 200 52132
-2024-09-12 18:06:16 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:16 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c4gvnjvgmm0o HTTP/1.1" 200 56795
-2024-09-12 18:06:16 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:16 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:17 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cjw3jenpznqo HTTP/1.1" 200 46902
-2024-09-12 18:06:17 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:17 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/boxing/articles/cr7r7vdvddko HTTP/1.1" 200 46068
-2024-09-12 18:06:17 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:17 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:18 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cq6rede0130o HTTP/1.1" 200 50208
-2024-09-12 18:06:18 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:18 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cz6xqgey07qo HTTP/1.1" 200 51405
-2024-09-12 18:06:18 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:18 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:18 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c14z3ynmp4ro HTTP/1.1" 200 51413
-2024-09-12 18:06:19 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:19 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckg2r5prlpno HTTP/1.1" 200 54974
-2024-09-12 18:06:19 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:19 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:20 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/cricket/articles/cje2evxdy70o HTTP/1.1" 200 46760
-2024-09-12 18:06:20 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:20 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/cnvy49eq4eyo HTTP/1.1" 200 52570
-2024-09-12 18:06:20 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:20 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:20 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/tennis/articles/c3d9gy81l42o HTTP/1.1" 200 54201
-2024-09-12 18:06:21 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:21 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cr5ngjm272lo HTTP/1.1" 200 45564
-2024-09-12 18:06:21 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:21 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:21 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ce380jklj44o HTTP/1.1" 200 55330
-2024-09-12 18:06:21 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:22 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c74l2r97l78o HTTP/1.1" 200 46113
-2024-09-12 18:06:22 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:22 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/american-football/articles/cpvy9ev9vjgo HTTP/1.1" 200 43999
-2024-09-12 18:06:22 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:22 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:23 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cg4y6gp6kkxo HTTP/1.1" 200 46372
-2024-09-12 18:06:23 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:23 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cy0nerpzj5jo HTTP/1.1" 200 45157
-2024-09-12 18:06:23 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:23 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:23 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/ckgwg1wjdvno HTTP/1.1" 200 44848
-2024-09-12 18:06:24 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:24 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/cn47e8l2897o HTTP/1.1" 200 46726
-2024-09-12 18:06:24 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:24 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:24 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/cd05385k722o HTTP/1.1" 200 58245
-2024-09-12 18:06:24 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:25 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/c4ngydm1x55o HTTP/1.1" 200 52586
-2024-09-12 18:06:25 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:25 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cdd734dp7emo HTTP/1.1" 200 49624
-2024-09-12 18:06:25 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:25 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:26 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/archery/articles/cp089q32yrqo HTTP/1.1" 200 48419
-2024-09-12 18:06:26 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:26 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/american-football/articles/c5yk93jkj4xo HTTP/1.1" 200 51027
-2024-09-12 18:06:26 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:26 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:27 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c134587zl01o HTTP/1.1" 200 45800
-2024-09-12 18:06:27 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:27 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:27 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c80e8gjyrz1o HTTP/1.1" 200 47471
-2024-09-12 18:06:28 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:28 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c15gewlnvj3o HTTP/1.1" 200 51406
-2024-09-12 18:06:28 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:28 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:28 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/golf/articles/c7v52nq4y8do HTTP/1.1" 200 50837
-2024-09-12 18:06:29 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:29 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/football/articles/c36n934x5l6o HTTP/1.1" 200 55065
-2024-09-12 18:06:29 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:29 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:29 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/formula1/articles/cy76rk5gndxo HTTP/1.1" 200 52237
-2024-09-12 18:06:30 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:30 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cx2gkjzyke4o HTTP/1.1" 200 45062
-2024-09-12 18:06:30 DEBUG urllib3.connectionpool: Starting new HTTPS connection (1): www.bbc.com:443
-2024-09-12 18:06:30 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:30 DEBUG urllib3.connectionpool: https://www.bbc.com:443 "GET /sport/articles/cn33yxd1rz0o HTTP/1.1" 200 40658
-2024-09-12 18:06:31 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) done      ExtractNLP()
-2024-09-12 18:06:31 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:06:31 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:31 INFO luigi-interface: Informed scheduler that task   ExtractNLP__99914b932b   has status   DONE
-2024-09-12 18:06:31 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:06:31 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 261
-2024-09-12 18:06:31 DEBUG luigi-interface: Pending tasks: 3
-2024-09-12 18:06:31 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) running   ExtractSalesData()
-2024-09-12 18:06:31 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:32 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) done      ExtractSalesData()
-2024-09-12 18:06:32 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:06:32 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:32 INFO luigi-interface: Informed scheduler that task   ExtractSalesData__99914b932b   has status   DONE
-2024-09-12 18:06:32 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:06:32 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 265
-2024-09-12 18:06:32 DEBUG luigi-interface: Pending tasks: 2
-2024-09-12 18:06:32 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) running   TransformSalesData()
-2024-09-12 18:06:32 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:33 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:34 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:35 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) done      TransformSalesData()
-2024-09-12 18:06:35 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:06:35 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:35 INFO luigi-interface: Informed scheduler that task   TransformSalesData__99914b932b   has status   DONE
-2024-09-12 18:06:35 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:06:35 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 245
-2024-09-12 18:06:35 DEBUG luigi-interface: Pending tasks: 1
-2024-09-12 18:06:35 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) running   LoadData()
-2024-09-12 18:06:35 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:36 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:37 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:38 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:39 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:40 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:41 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:42 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:44 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:45 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:46 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:47 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:48 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:49 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:50 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:51 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:52 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:53 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:54 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:55 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:56 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:57 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/ping HTTP/1.1" 200 34
-2024-09-12 18:06:58 INFO luigi-interface: [pid 28424] Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) done      LoadData()
-2024-09-12 18:06:58 DEBUG luigi-interface: 1 running tasks, waiting for next task to finish
-2024-09-12 18:06:58 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/add_task HTTP/1.1" 200 18
-2024-09-12 18:06:58 INFO luigi-interface: Informed scheduler that task   LoadData__99914b932b   has status   DONE
-2024-09-12 18:06:58 DEBUG luigi-interface: Asking scheduler for work...
-2024-09-12 18:06:58 DEBUG urllib3.connectionpool: http://localhost:8082 "POST /api/get_work HTTP/1.1" 200 154
-2024-09-12 18:06:58 DEBUG luigi-interface: Done
-2024-09-12 18:06:58 DEBUG luigi-interface: There are no more tasks to run at this time
-2024-09-12 18:06:58 INFO luigi-interface: Worker Worker(salt=4015691113, workers=1, host=pop-os, username=jeisa, pid=28424) was stopped. Shutting down Keep-Alive thread
-2024-09-12 18:06:58 INFO luigi-interface: 
-===== Luigi Execution Summary =====
-
-Scheduled 4 tasks of which:
-* 4 ran successfully:
+Scheduled 6 tasks of which:
+* 6 ran successfully:
+    - 1 ExtractElectronicsData()
     - 1 ExtractNLP()
     - 1 ExtractSalesData()
     - 1 LoadData()
-    - 1 TransformSalesData()
+    - 1 TransformElectronics()
+    ...
 
 This progress looks :) because there were no failed tasks or missing dependencies
 
