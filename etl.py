@@ -1,7 +1,8 @@
+import dotenv
 import luigi
 import pandas as pd
 from pangres import upsert
-
+import os
 from helper.db_connection import connect_db_source, connect_db_warehouse
 from helper.electronics_helper import (
     categorize_shipping,
@@ -11,6 +12,11 @@ from helper.electronics_helper import (
 )
 from helper.scrape_website import scrape_news_site
 
+
+print(f"Current working directory: {os.getcwd()}")
+
+dotenv.load_dotenv()
+WD = os.getenv("WD")
 
 class ExtractSalesData(luigi.Task):
     def requires(self):
@@ -23,7 +29,7 @@ class ExtractSalesData(luigi.Task):
         df.to_csv(self.output().path, index=False)
 
     def output(self):
-        return luigi.LocalTarget("data/raw/sales_raw.csv")
+        return luigi.LocalTarget(f"{WD}data/raw/sales_raw.csv")
 
 
 class TransformSalesData(luigi.Task):
@@ -66,7 +72,7 @@ class TransformSalesData(luigi.Task):
         df_filled.to_csv(self.output().path, index=False)
 
     def output(self):
-        return luigi.LocalTarget("data/transform/sales_transform.csv")
+        return luigi.LocalTarget(f"{WD}data/transform/sales_transform.csv")
 
 
 class ExtractElectronicsData(luigi.Task):
@@ -74,12 +80,12 @@ class ExtractElectronicsData(luigi.Task):
         pass
 
     def run(self):
-        file_path = "./data/raw/ElectronicsProductsPricingData.csv"
+        file_path = f"{WD}/data/raw/ElectronicsProductsPricingData.csv"
         electronics_df = pd.read_csv(file_path)
         electronics_df.to_csv(self.output().path, index=False)
 
     def output(self):
-        return luigi.LocalTarget("data/raw/electronics_raw.csv")
+        return luigi.LocalTarget(f"{WD}data/raw/electronics_raw.csv")
 
 
 class TransformElectronics(luigi.Task):
@@ -159,7 +165,7 @@ class TransformElectronics(luigi.Task):
         df.to_csv(self.output().path, index=False)
 
     def output(self):
-        return luigi.LocalTarget("data/transform/electronics_transform.csv")
+        return luigi.LocalTarget(f"{WD}data/transform/electronics_transform.csv")
 
 
 class ExtractNLP(luigi.Task):
@@ -171,7 +177,7 @@ class ExtractNLP(luigi.Task):
         nlp_df.to_csv(self.output().path, index=False)
 
     def output(self):
-        return luigi.LocalTarget("data/raw/nlp_raw.csv")
+        return luigi.LocalTarget(f"{WD}data/raw/nlp_raw.csv")
 
 
 class LoadData(luigi.Task):
@@ -218,9 +224,9 @@ class LoadData(luigi.Task):
 
     def output(self):
         return [
-            luigi.LocalTarget("data/load/sales_load.csv"),
-            luigi.LocalTarget("data/load/nlp_load.csv"),
-            luigi.LocalTarget("data/laod/electronics_load.csv"),
+            luigi.LocalTarget(f"{WD}data/load/sales_load.csv"),
+            luigi.LocalTarget(f"{WD}data/load/nlp_load.csv"),
+            luigi.LocalTarget(f"{WD}data/laod/electronics_load.csv"),
         ]
 
 
