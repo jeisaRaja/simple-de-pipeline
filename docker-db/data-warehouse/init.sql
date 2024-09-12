@@ -11,3 +11,12 @@ CREATE TABLE IF NOT EXISTS amazon_sales_data (
     actual_price DECIMAL(10, 2)
 );
 
+
+CREATE TABLE IF NOT EXISTS nlp_data (
+    article_id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255),
+    date TIMESTAMP,
+    url TEXT,
+    content TEXT
+);
