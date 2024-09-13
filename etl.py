@@ -1,4 +1,4 @@
-import dotenv
+from dotenv import load_dotenv
 import luigi
 import pandas as pd
 from pangres import upsert
@@ -15,7 +15,7 @@ from helper.scrape_website import scrape_news_site
 
 print(f"Current working directory: {os.getcwd()}")
 
-dotenv.load_dotenv()
+load_dotenv()
 WD = os.getenv("WD")
 
 
@@ -228,9 +228,18 @@ class LoadData(luigi.Task):
         return [
             luigi.LocalTarget(f"{WD}data/load/sales_load.csv"),
             luigi.LocalTarget(f"{WD}data/load/nlp_load.csv"),
-            luigi.LocalTarget(f"{WD}data/laod/electronics_load.csv"),
+            luigi.LocalTarget(f"{WD}data/load/electronics_load.csv"),
         ]
 
 
 if __name__ == "__main__":
-    luigi.build([LoadData()])
+    luigi.build(
+        [
+            ExtractSalesData(),
+            ExtractElectronicsData(),
+            ExtractNLP(),
+            TransformSalesData(),
+            TransformElectronics(),
+            LoadData(),
+        ]
+    )
