@@ -18,6 +18,7 @@ print(f"Current working directory: {os.getcwd()}")
 dotenv.load_dotenv()
 WD = os.getenv("WD")
 
+
 class ExtractSalesData(luigi.Task):
     def requires(self):
         pass
@@ -198,7 +199,7 @@ class LoadData(luigi.Task):
             table_name=table_name_sales,
             if_row_exists="update",
         )
-        load_sales.to_csv(self.output()[1].path, index=False)
+        load_sales.to_csv(self.output()[0].path, index=False)
 
         load_nlp = pd.read_csv(self.input()[1].path)
         load_nlp.insert(0, "article_id", range(0, 0 + len(load_nlp)))
@@ -221,6 +222,7 @@ class LoadData(luigi.Task):
             table_name=table_name_electronics,
             if_row_exists="update",
         )
+        load_electronics.to_csv(self.output()[2].path, index=False)
 
     def output(self):
         return [

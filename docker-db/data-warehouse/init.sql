@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS nlp_data (
     content TEXT
 );
 
-CREATE TABLE IF NOT EXISTS products (
+CREATE TABLE IF NOT EXISTS electronics_data (
     product_id SERIAL PRIMARY KEY,
     price_max DECIMAL(10, 2),
     price_min DECIMAL(10, 2),

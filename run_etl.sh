@@ -10,4 +10,3 @@ dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "Luigi Started at ${dt}" >> /home/jeisa/programming/de/pacmann-project-1/logs/luigi_info.log
 
 echo "End Luigi ETL Pipeline Process"
-
